@@ -13,9 +13,8 @@ class ParsingTests: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        let jsonDecoder = JSONDecoder()
-        sut = jsonDecoder.decodeData("step1_testdata")
-        
+        let parseJson: ParseJson = ParseJson()
+        sut = parseJson.decodeJsonFile(fileName: "step1_testdata")
     }
 
     override func tearDownWithError() throws {
